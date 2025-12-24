@@ -1,0 +1,56 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(136, 136, 136, 0.281) transparent;
+}
+
+.message::-webkit-scrollbar {
+  width: 6px;
+}
+
+.message::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.message::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.281);
+  border-radius: 3px;
+}
+
+.message::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 136, 136, 0.5);
+}
+
+/* File upload button hover effect */
+.file-upload-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.file-upload-button:hover {
+  transform: scale(1.1);
+}
+
+/* Message animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-item {
+  animation: slideIn 0.3s ease-out;
+}
